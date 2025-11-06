@@ -3,8 +3,8 @@
 **Objectives:** 
 - Document current state and future state business requirements and processes.
 - Translate business requirements into actionable functional requirements for development and project teams.
-- Analyze and validate deliverable to ensure completeness, consistency to requirements.
-- Coordinate unit acceptance testing (UAT) and end-to-end (E2E) testing with business.
+- Analyze and validate deliverables to ensure completeness, consistency to requirements.
+- Coordinate business unit acceptance testing (UAT) and end-to-end (E2E) testing.
 - Communicate changes, enhancements, and modifications of business requirements to all stakeholders.
 - Analyze business processes to identify gaps and document best practices.
 - Map old to new database (data dictionary) for quick reference when generating SQL query-based Power BI reports.
