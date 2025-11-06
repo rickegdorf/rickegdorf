@@ -24,6 +24,6 @@
 - Established the source of truth for seller and broker details, including state licensing.
 - Successful application stand up with minimal business impact.
 
-**Power BI Artifact: Work queue report** 
+### Power BI Artifact: Work Queue Report
 - Filters by due date, risk agent, task.
 - Built upon a SQL query to extract data from the production database.
