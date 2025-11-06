@@ -29,7 +29,16 @@
 - Filters by due date, risk agent, task.
 - Built upon a SQL query to extract data from the production database.
 
+**Power BI Artifact: Production Database Meta Data Dictionary**
+- Filters by schema, table, column, FKey.
+- Build upon a SQL query to extract the data from the production database.
+
 **UAT and E2E Testing Contributions**
   - Developed a test case template with built-in formulae and table of contents quick reference capability.
   - Authored and proctored dozens of user and end-to-end test cases.
   - Tools: Azure Dev Ops, SQL Management Studio, Microsoft Excel
+
+**Data Dictionary**
+- Mapped schema > table > column information between old and new databases.
+- When a direct mapping did not exist, provided explanation, conditions, and SQL query.
+- Tools: Microsoft Excel, SQL Management Studio, SharePoint
