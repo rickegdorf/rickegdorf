@@ -1,4 +1,4 @@
-## Project: Mortgage Seller and Broker Risk Tracking Application
+## Project: Stand up the Mortgage Seller and Broker Risk Tracking Application
 
 **Objectives:** 
 - Document current state and future state business requirements and processes.
