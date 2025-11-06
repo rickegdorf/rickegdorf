@@ -3,23 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>Rick Egdorf - GitHub Profile</title>
-
   <style>
-  h2,h3 {
-    color: #4682B4; /* Steel Blue */
-  }
-
-   body, li, p, th, td {
+    h2,h3 {
+      color: #4682B4; /* Steel Blue */
+    }
+    body, li, p, th, td {
     font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-  }  
+    }
+/* Sidebar TOC */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background-color: #f4f4f4;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+    }
+
+    nav h2 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #4682B4;
+    }
+
+    /* Main content */
+    main {
+      margin-left: 240px;
+      padding: 20px;
+      max-width: 800px;
+    }
 </style>
   
 </head>
 <body>
-
+    <nav>
+    <h2>Table of Contents</h2>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#projects">Featured Projects</a></li>
+      <li><a href="#deliverables">Deliverables</a></li>
+      <li><a href="#connect">Let's Connect</a></li>
+    </ul>
+  </nav>
+<main>
   <h1>Hi there! I'm Rick Egdorf.</h1>
   <p>Welcome to my GitHub profile!</p>
 
@@ -157,8 +202,9 @@
   <a href="https://www.linkedin.com/in/rick-egdorf/">LinkedIn</a> |
   <a href="mailto:regdorf@gmail.com">Email</a>
 </p>
-
-
+</main>
+</body>
+</html>
 
 
           
