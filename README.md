@@ -5,7 +5,7 @@ Welcome to my GitHub profile!
 
 **Business Analyst | Business Liason | Sr. Technical Writer | Process Improvement Analyst | Knowledge Analyst**
 
-I'm an energetic, focused, innovator who loves a challenge, including those that require new skills. Most recently, my role was that but also required me to step up into roles that needed attention. Originally hired to create a data dictionary, opportunities arose for user acceptance testing (UAT) curator, business liaison, project lead, data validation, and Power BI report developer. I communicate equally well with business, technology, and leadership. 
+I'm an energetic, focused, innovator who loves a challenge, including those that require new skills. Most recently, my role also required me to volunteer for roles that needed attention. Originally hired to create a data dictionary, opportunities arose for user acceptance testing (UAT) curator, business liaison, project lead, data validation, and Power BI report developer. I communicate equally well with business, technology, and leadership. 
 
 ## Featured skills
 
