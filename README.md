@@ -34,7 +34,7 @@
 - Build upon a  query to extract the data from the production database.
 
 **UAT and E2E Testing Contributions**
-  - Developed a test case template with built-in formulae and table of contents for quick reference capability.
+  - Developed a test case template with built-in formulae and table of contents and filters for quick reference capability.
   - Authored and proctored dozens of user and end-to-end test cases.
   - Tools: Azure Dev Ops, SQL Server Management Studio, Microsoft Excel
 
