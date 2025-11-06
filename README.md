@@ -37,8 +37,9 @@ I'm an energetic, focused, innovator who loves a challenge, including those that
 - Analyze and validate deliverables to ensure completeness, consistency to requirements.
 - Coordinate business unit acceptance testing (UAT) and end-to-end (E2E) testing.
 - Communicate changes, enhancements, and modifications of business requirements to all stakeholders.
+- Validate data migration to ensure accuracy and compliance with new business rules. 
 - Analyze business processes to identify gaps and document best practices.
-- Map old to new database (data dictionary) for quick reference when generating SQL query-based Power BI reports.
+- Create a data dictionary for quick reference when generating SQL query-based Power BI reports.
 
 **Tools used:**
 - Microsoft Office
@@ -57,15 +58,15 @@ I'm an energetic, focused, innovator who loves a challenge, including those that
 
 ## Deliverables and Artifacts
 **Power BI Artifact: Work Queue Report**
-- Filters by due date, risk agent, task, seller, broker.
-- Built upon a SQL query to extract data from the production database.
+- Filters by due date, assigned associate, task, seller, broker.
+- Built upon a SQL query that extracts data from the production database.
 
 **Power BI Artifact: Production Database Meta Data Dictionary**
 - Filters by schema, table, column, FKey.
-- Build upon a  query to extract the data from the production database.
+- Build upon a SQL query that extracts data from the production database.
 
 **UAT and E2E Testing Contributions**
-  - Developed a test case template with built-in formulae and table of contents and filters for quick reference capability.
+  - Developed a test case template with built-in formulae, table of contents, and filters for quick reference.
   - Authored and proctored dozens of user and end-to-end test cases.
   - Tools: Azure Dev Ops, SQL Server Management Studio, Microsoft Excel
 
