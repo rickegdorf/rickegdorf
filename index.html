@@ -61,12 +61,13 @@
 }
 
 /* Collapsable headings   */
-.collapsible {
-  cursor: pointer;
-  background-color: #f0f0f0;
-  padding: 0.5em;
-  border-radius: 4px;
+.collapsible::before {
+  content: "▶"; /* or use "▼", "►", "▸", etc. */
+  display: inline-block;
+  margin-right: 0.5em;
+  transition: transform 0.2s ease;
 }
+
 
 .collapsible-content {
   display: none;
