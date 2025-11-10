@@ -73,7 +73,13 @@
   margin-top: 0.5em;
   padding-left: 1em;
 }
-    
+
+/*Border above footer heading */    
+ .bordered-heading {
+    border-top: 4px solid #333; /* Dark gray/black border */
+    padding-top: 10px;          /* Space between border and text */
+    margin-top: 20px;           /* Space above the border */
+  }    
 </style>
 
 
@@ -251,8 +257,8 @@
 </div>
 
 
-<h2>Effective Data Dictionary and API Field Definitions</h2>
-<p class="collasible">Have you ever experienced bad documentation? Whether you're assembling your child's toy or setting up a camera for a once-in-a-lifetime solar eclipse, poorly written and ambiguous documentation can be wasteful and frustrating. Clearly written field definintion reference documentation is even more critical, as the target audience is technical and efficiency is key.</p>
+<h2 id="api">Effective Data Dictionary and API Field Definitions</h2>
+<p class="collapsible">Have you ever experienced bad documentation? Whether you're assembling your child's toy or setting up a camera for a once-in-a-lifetime solar eclipse, poorly written and ambiguous documentation can be wasteful and frustrating. Clearly written field definintion reference documentation is even more critical, as the target audience is technical and efficiency is key.</p>
 
 <div class="collapsible-content">
 <p>Below is a sample JSON and its corresponding field definitions table from an API reference guide. Compare the ambiguous definitions with the useful, descriptive ones written by a technical writer. Which do you prefer?</p>
@@ -397,7 +403,7 @@
 </div>
   
   
-<h2 id="connect">Let's connect!</h2>
+<h2 id="connect" class="bordered-heading">Let's connect!</h2>
 <p>
   <a href="https://www.linkedin.com/in/rick-egdorf/">LinkedIn</a> |
   <a href="mailto:regdorf@gmail.com">Email</a>
