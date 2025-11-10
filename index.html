@@ -60,6 +60,32 @@
      min-height: 100vh;
 }
 
+    /* Collapsable headings   */
+    details {
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: #f9f9f9;
+}
+
+summary {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.3em;
+  outline: none;
+}
+
+details[open] summary {
+  color: #0078d4; /* Accent color when open */
+}
+
+details p {
+  margin: 0.5em 0 0 0;
+  padding-left: 1em;
+}
+
 </style>
 
 
@@ -85,7 +111,8 @@
   </nav>
 <main>
   <h1>From Opportunity to Solution</h1>
-  <h2 id="intro">Who am I?</h2>
+  <details id="intro">
+  <Summary><h2></h2>Who am I?</h2></Summary>
   <p><strong>Business Analyst | Business Liaison | Sr. Technical Writer | Process Improvement Analyst | Knowledge Analyst</strong></p>
   <p>
     I'm an energetic, focused innovator who loves a challenge, including those that require new skills.
@@ -93,6 +120,7 @@
     opportunities arose for user acceptance testing (UAT) curator, business liaison, project lead, data migration validator, and Power BI report developer.
     I communicate equally well with business, technology, and leadership.
   </p>
+  </details>
 
   <h2 id="skills">My Toolbox</h2>
   <table border="1" cellpadding="8" style="table-layout: auto; width: 100%;">
