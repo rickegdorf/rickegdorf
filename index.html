@@ -86,34 +86,23 @@
     margin-top: 20px;           /* Space above the border */
   }  
 
-/* Tool Tip styling */    
-.tooltip-heading {
-    position: relative;
-    display: inline-block;
-    cursor: help;
-  }
-
-  .tooltip-text {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 6px 10px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 125%; /* Position above the heading */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    white-space: nowrap;
-    z-index: 1;
-  }
-
-  .tooltip-heading.show-tooltip .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
+/* INLINE COLAPSIBLE TEXT */
+  .inline-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+.inline-content {
+  display: none;
+  margin-left: 0.5em;
+}
+.inline-toggle.active::after {
+  content: "▼";
+}
+.inline-toggle::after {
+  content: "▶";
+}
+    
 </style>
 
 
@@ -151,6 +140,16 @@
     clearTimeout(tooltipTimer);
     heading.classList.remove('show-tooltip');
   });
+
+/*INLINE COLLASIBLE TEXT*/    
+ document.querySelectorAll(".inline-toggle").forEach(toggle => {
+    toggle.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === "inline" ? "none" : "inline";
+    });
+  });
+    
 </script>
 </head>
 <body>
@@ -312,8 +311,12 @@
 
 <h2 id="api"  class="collapsible">Effective Data Dictionary and API Field Definitions</h2>
 <div class="collapsible-content">  
-<p>Have you ever experienced bad documentation? Whether you're assembling your child's toy or setting up a camera for a once-in-a-lifetime solar eclipse, poorly written and ambiguous documentation can be wasteful and frustrating. Clearly written field definintion reference documentation is even more critical, as the target audience is technical and efficiency is key.</p>
-  
+<p>Have you ever experienced bad documentation? 
+  <span class="inline-toggle">▶</span>
+  <span class="inline-content">
+    Whether you're assembling your child's toy or setting up a camera for a once-in-a-lifetime solar eclipse, poorly written and ambiguous documentation can be wasteful and frustrating. Clearly written field definintion reference documentation is even more critical, as the target audience is technical and efficiency is key.</p>
+</span>
+</p>
 <p>Below is a sample JSON and its corresponding field definitions table from an API reference guide. Compare the ambiguous definitions with the useful, descriptive ones written by a technical writer. Which do you prefer?</p>
 
 <strong>Sample JSON</strong>
