@@ -60,32 +60,7 @@
      min-height: 100vh;
 }
 
-    /* Collapsable headings   */
-    details {
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0.5em;
-  background-color: #f0f0f0;
-}
-
-summary {
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  padding: 0.3em;
-  outline: none;
-}
-
-details[open] summary {
-  color: #0078d4; /* Accent color when open */
-}
-
-details p {
-  margin: 0.5em 0 0 0;
-  padding-left: 1em;
-}
-
+/* Collapsable headings   */
 .collapsible {
   cursor: pointer;
   background-color: #f0f0f0;
@@ -109,6 +84,7 @@ details p {
 <meta property="og:url" content="https://rickegdorf.github.io/rickegdorf/">
 <meta property="og:type" content="website">
 
+  /* Script to collapsable headings */
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const headers = document.querySelectorAll(".collapsible");
@@ -148,18 +124,8 @@ details p {
 </div>
 
   
-  <Summary><h2 id="intro"></h2>Who am I?</h2></Summary>
-  <details>
-  <p><strong>Business Analyst | Business Liaison | Sr. Technical Writer | Process Improvement Analyst | Knowledge Analyst</strong></p>
-  <p>
-    I'm an energetic, focused innovator who loves a challenge, including those that require new skills.
-    Most recently, my role required me to volunteer for roles that needed a leader. Originally hired to create a data dictionary,
-    opportunities arose for user acceptance testing (UAT) curator, business liaison, project lead, data migration validator, and Power BI report developer.
-    I communicate equally well with business, technology, and leadership.
-  </p>
-  </details>
-
-  <h2 id="skills">My Toolbox</h2>
+  <h2 id="skills" class="collapsible">My Toolbox</h2>
+  <div class="collapsible-content">
   <table border="1" cellpadding="8" style="table-layout: auto; width: 100%;">
     <thead>
       <tr>
@@ -215,11 +181,12 @@ details p {
       </tr>
     </tbody>
   </table>
+  </div>
+  
+<h2 id="projects" >My Featured Projects</h2>
 
-<h2 id="projects">My Featured Projects</h2>
-
-<h3>Stand up the Mortgage Seller and Broker Risk Tracking Application</h3>
-
+<h3 class="collapsible">Stand up the Mortgage Seller and Broker Risk Tracking Application</h3>
+<div class="collapsible-content">
 <p><strong>Objectives:</strong></p>
 <ul>
   <li>Document current state and future state business requirements and processes.</li>
@@ -250,9 +217,10 @@ details p {
   <li>Established the source of truth for seller and broker details, including state licensing.</li>
   <li>Stood up the application with minimal business impact and well documented best practices.</li>
 </ul>
-
-<h2 id="deliverables">Deliverables and Artifacts</h2>
-
+</div>
+  
+<h2 id="deliverables" class="collapsable">Deliverables and Artifacts</h2>
+<div class="collapsible-content">
 <p><strong>Power BI Artifact: Work Queue Report</strong></p>
 <ul>
   <li>Filters by due date, assigned associate, task, seller, broker.</li>
@@ -280,7 +248,8 @@ details p {
   <li>When a direct mapping did not exist, provided explanation, conditions, and SQL query to derive same data.</li>
   <li>Tools: Microsoft Excel, SQL Server Management Studio, Power BI Desktop, SharePoint</li>
 </ul>
-
+</div>
+  
 <h2 id="connect">Let's connect!</h2>
 <p>
   <a href="https://www.linkedin.com/in/rick-egdorf/">LinkedIn</a> |
