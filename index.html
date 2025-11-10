@@ -86,6 +86,19 @@ details p {
   padding-left: 1em;
 }
 
+.collapsible {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+.collapsible-content {
+  display: none;
+  margin-top: 0.5em;
+  padding-left: 1em;
+}
+    
 </style>
 
 
@@ -96,6 +109,17 @@ details p {
 <meta property="og:url" content="https://rickegdorf.github.io/rickegdorf/">
 <meta property="og:type" content="website">
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const headers = document.querySelectorAll(".collapsible");
+      headers.forEach(header => {
+        header.addEventListener("click", function () {
+          const content = this.nextElementSibling;
+          content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>  
 </head>
 <body>
     <nav>
@@ -111,6 +135,18 @@ details p {
   </nav>
 <main>
   <h1>From Opportunity to Solution</h1>
+
+  <h2 id="intro" class="collapsible">Who am I?</h2>
+<div class="collapsible-content">
+  <p><strong>Business Analyst | Business Liaison | Sr. Technical Writer | Process Improvement Analyst | Knowledge Analyst</strong></p>
+  <p>
+    I'm an energetic, focused innovator who loves a challenge, including those that require new skills.
+    Most recently, my role required me to volunteer for roles that needed a leader. Originally hired to create a data dictionary,
+    opportunities arose for user acceptance testing (UAT) curator, business liaison, project lead, data migration validator, and Power BI report developer.
+    I communicate equally well with business, technology, and leadership.
+  </p>
+</div>
+
   
   <Summary><h2 id="intro"></h2>Who am I?</h2></Summary>
   <details>
