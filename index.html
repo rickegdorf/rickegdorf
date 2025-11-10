@@ -79,7 +79,36 @@
     border-top: 4px solid #333; /* Dark gray/black border */
     padding-top: 10px;          /* Space between border and text */
     margin-top: 20px;           /* Space above the border */
-  }    
+  }  
+
+/* Tool Tip styling */    
+.tooltip-heading {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+  }
+
+  .tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 125%; /* Position above the heading */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .tooltip-heading.show-tooltip .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
 </style>
 
 
@@ -92,6 +121,7 @@
 
   /* Script to collapsable headings */
   <script>
+    //Collasible section logic starts here
     document.addEventListener("DOMContentLoaded", function () {
       const headers = document.querySelectorAll(".collapsible");
       headers.forEach(header => {
@@ -101,7 +131,22 @@
         });
       });
     });
-  </script>  
+
+  //Tooltip Logic starts here  
+  const heading = document.querySelector('.tooltip-heading');
+  let tooltipTimer;
+
+  heading.addEventListener('mouseenter', () => {
+    tooltipTimer = setTimeout(() => {
+      heading.classList.add('show-tooltip');
+    }, 2000); // 2-second delay
+  });
+
+  heading.addEventListener('mouseleave', () => {
+    clearTimeout(tooltipTimer);
+    heading.classList.remove('show-tooltip');
+  });
+</script>
 </head>
 <body>
     <nav>
@@ -118,7 +163,10 @@
 <main>
   <h1>From Opportunity to Solution</h1>
 
-  <h2 id="intro" class="collapsible">Who am I?</h2>
+  <h2 id="intro" class="collapsible">
+    Who am I?
+    <span class="tooltip-text">This section introduces the client profile.</span>
+  </h2>
 <div class="collapsible-content">
   <p><strong>Business Analyst | Business Liaison | Sr. Technical Writer | Process Improvement Analyst | Knowledge Analyst</strong></p>
   <p>
