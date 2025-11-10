@@ -249,6 +249,17 @@
   <li>Tools: Microsoft Excel, SQL Server Management Studio, Power BI Desktop, SharePoint</li>
 </ul>
 </div>
+
+  <div id="api-content"></div>
+
+<script>
+  fetch("api_index.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("api-content").innerHTML = data;
+    });
+</script>
+
   
 <h2 id="connect">Let's connect!</h2>
 <p>
