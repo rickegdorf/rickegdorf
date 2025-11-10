@@ -250,6 +250,7 @@
 </ul>
 </div>
 
+  /*
   <div id="api-content"></div>
 
 <script>
@@ -259,7 +260,153 @@
       document.getElementById("api-content").innerHTML = data;
     });
 </script>
+*/
 
+<h1>Effective Data Dictionary and API Field Definitions</h1>
+
+<p>Have you ever experienced bad documentation? Whether you're assembling your child's toy or setting up a camera for a once-in-a-lifetime solar eclipse, poorly written and ambiguous documentation can be wasteful and frustrating. Clearly written field definintion reference documentation is even more critical, as the target audience is technical and efficiency is key.</p>
+
+<p>Below is a sample JSON and its corresponding field definitions table from an API reference guide. Compare the ambiguous definitions with the useful, descriptive ones written by a technical writer. Which do you prefer?</p>
+
+<strong>Sample JSON</strong>
+
+<pre><code>{
+  "addressList": [
+    {
+      "address1": "string",
+      "address2": "string",
+      "city": "string",
+      "country": "string",
+      "postalcode": "string",
+      "state": "string"
+    }
+  ],
+  "languageList": [
+    {
+      "languageCode": "string",
+      "languageUse": "string"
+    }
+  ],
+  "clientAffiliation": [
+    {
+      "billingPrefID": "int",
+      "effectiveDate": "string",
+      "expirationDate": "string"
+    }
+  ],
+  "data": [
+    "holdStatus": "boolean"
+  ]
+}
+</code></pre>
+
+<strong>Field Definitions Table</strong>
+
+ <table border="1">
+  <thead>
+    <tr>
+      <th>Object</th>
+      <th>Ambiguous Definition</th>
+      <th>Useful, Descriptive Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>addressList</td>
+      <td>Address data</td>
+      <td>An object that contains details about the client's address.</td>
+    </tr>
+    <tr>
+      <td>addressList.clientName</td>
+      <td>Client name</td>
+      <td>Name of the client.</td>
+    </tr>
+    <tr>
+      <td>addressList.address1</td>
+      <td>Address</td>
+      <td>First line of the client's address.<br>Maximum: 55 characters.</td>
+    </tr>
+    <tr>
+      <td>addressList.address2</td>
+      <td>Address</td>
+      <td>Additional address line, if needed. Examples: apartment number, PO box, care of address.<br>Maximum: 55 characters</td>
+    </tr>
+    <tr>
+      <td>addressList.country</td>
+      <td>Country name</td>
+      <td>Name of the country of the client's address. Country codes are defined by the International Organization for Standardization (ISO).<br>Maximum: 3 characters.</td>
+    </tr>
+    <tr>
+      <td>addressList.postalcode</td>
+      <td>zipcode</td>
+      <td>Five-digit postal code for a U.S. location. <strong>Note:</strong> U.S. postal codes may also contain a hyphen and the four-digit extension.<br>Maximum: 20 characters.</td>
+    </tr>
+    <tr>
+      <td>addressList.state</td>
+      <td>State</td>
+      <td>Name of the city of the client’s address.<br>Maximum: 50 characters.</td>
+    </tr>
+    <tr>
+      <td>languageList</td>
+      <td>Language data</td>
+      <td>An object that contains details about the client's preferred language and any other languages used by the client’s employees.</td>
+    </tr>
+    <tr>
+      <td>languageList.languageCode</td>
+      <td>Language code</td>
+      <td>A numeric code that indicates the client's language preference.<br>Maximum: 2 characters.</td>
+    </tr>
+    <tr>
+      <td>languageList.languageUse</td>
+      <td>Indicates language used</td>
+      <td>A numeric code that indicates the general acceptance of each language by the client’s employees.
+        <ul>
+          <li>1: Considered the native language of many or most employees.</li>
+          <li>2: Used less often but still spoken by many employees.</li>
+          <li>3: Used infrequently.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>clientAffiliation</td>
+      <td>Client affiliation data</td>
+      <td>An object that contains information about the relationship between the client and ABC Corp.</td>
+    </tr>
+    <tr>
+      <td>clientAffiliation.billingPrefID</td>
+      <td>ID of preferred billing</td>
+      <td>The system-generated identifier that represents a billing preference record.</td>
+    </tr>
+    <tr>
+      <td>clientAffiliation.effectiveDate</td>
+      <td>Effective date</td>
+      <td>Start date of the affiliation record for the client and XYZ Corp.<br>Format: YYYY-MM-DD</td>
+    </tr>
+    <tr>
+      <td>clientAffiliation.expirationDate</td>
+      <td>Expiration date</td>
+      <td>End date of the affiliation record for the client and XYZ Corp.<br>Format: YYYY-MM-DD</td>
+    </tr>
+    <tr>
+      <td>data</td>
+      <td>Data</td>
+      <td>An object that contains information about the contract.</td>
+    </tr>
+    <tr>
+      <td>data.holdStatus</td>
+      <td>Defines holds on contract</td>
+      <td>Indicates whether the client has any holds currently applied to the contract.
+        <br>Valid values:
+        <ul>
+          <li>0: False (default)</li>
+          <li>1: True</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  
   
 <h2 id="connect">Let's connect!</h2>
 <p>
