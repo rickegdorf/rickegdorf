@@ -245,8 +245,15 @@
 <h3 class="collapsible">Mortgage Seller and Broker Risk Tracking Application</h3>
 <div class="collapsible-content" style="margin-left: 20px;">
 <p><strong>Role: </strong>Business Analyst, UAT Coordinator, Project Lead</p>
-<ul>
-  <li><strong>Challenge: </strong>Manual broker tracking spreadsheets created inefficiencies and compliance risks.</li>
+ <li><strong>Challenges: </strong>
+   <ul>
+    <li>Manual broker tracking spreadsheets created inefficiencies and compliance risks.</li>
+    <li>Data was fragmented across multiple platforms, causing downstream applications to be inefficient and reducing team productivity.</li>
+    <li>User data entry errors introduced inaccuracies and further slowed processes.</li>
+    <li>Difficult reporting processes limited visibility and timely decision-making.</li>
+   </ul>
+</li>
+   
   <li><strong>Action: </strong>Directed end‑to‑end delivery of a new risk tracking application. </li>
    <ul>
     <li>Documented current/future state requirements and translated them into actionable functional specs.</li>
@@ -268,11 +275,9 @@
    </ul></li>
   <li><strong>Tools: </strong>Microsoft Office, SharePoint, Azure DevOps, SQL Server Management Studio, Power BI, Microsoft Copilot</li>
 </ul>
-
-
 </div>
 
-<h3 id="api"  class="collapsible" >Develop Effective Data Dictionary and API Documentation</h3>
+<h3 id="api"  class="collapsible" >Develop Systemically Generated API Documentation</h3>
     <div class="collapsible-content" style="margin-left: 20px;">
 
 <p><strong>Role: </strong>Business Analyst, Project Lead, Senior Technical Writer, Developer</p>
@@ -284,7 +289,7 @@
    </ul>
   <li><strong>Action: </strong></li>
    <ul>
-    <li>Developed processes and infrastructure capable of systemically generated API documentation .
+    <li>Developed processes and infrastructure capable of systemically generated API documentation.
     <li>Conducted a full audit of API field definitions and identified inconsistencies.</li>
     <li>Authored clear, descriptive API documentation with constraints, examples, and ISO standards.</li>
     <li>Developed a reusable template for field definitions, ensuring consistency across future projects.</li>
@@ -299,8 +304,6 @@
 </ul>
   </li>
   <li><strong>Tools: </strong>GitHub, Maven, AsciiDoctor, Markdown, Unit test descriptor files.</li>
-</ul>
-
      
 <li><strong>Example: </strong>Sample Unit Test Descriptor File</stron></li>
 <pre><code>
@@ -327,7 +330,34 @@
     "required": true,
   },
 </code></pre>
+    </ul> 
+    </div>
+
+ <h3 id="api"  class="collapsible" >Develop Usable JSON Field Definitions</h3>
+    <div class="collapsible-content" style="margin-left: 20px;">
+
+<p><strong>Role: </strong>Business Analyst, Senior Technical Writer</p>
+<ul>
+  <li><strong>Challenge: </strong>Ambiguous, oversimplified, and written for the wrong audience, leading to inefficiencies and errors in API implementation.</li>
+  <li><strong>Action: </strong></li>
+   <ul>
+    <li>Developed processes and infrastructure capable of systemically generated API documentation.
+    <li>Conducted a full audit of API field definitions and identified inconsistencies.</li>
+    <li>Authored clear, descriptive API documentation with constraints, examples, and ISO standards.</li>
+    <li>Developed a reusable template for field definitions, ensuring consistency across future projects.</li>
+   </ul>
+  <li><strong>Outcome: </strong>
+<ul>
+  <li>Developed and implemented best practices and infrastructure for accurate, real-time API documentation from source-of-truth data, reducing manual effort by 75% and minimizing impact on Dev/QA teams.</li>
+  <li>Eliminated ambiguity in documentation, accelerating developer onboarding and reducing integration errors.</li>
+  <li>Established a best‑practice framework for technical documentation, widely adopted across teams.</li>
+  <li>Fostered alignment, collaboration, and innovation between documentation, Dev, and QA teams.</li>
+  <li>Built an extensible, non‑proprietary framework leveraging existing tools (GitHub, Spring REST, Maven, AsciiDoctor, Markdown), ensuring platform independence and accessibility for external end users, with capability to support a data dictionary.</li>
+</ul>
+  </li>
+  <li><strong>Tools: </strong>GitHub, Maven, AsciiDoctor, Markdown, Unit test descriptor files.</li>
      
+<li><strong>Example: </strong>Sample JSON file needing useful documentation</li>     
  <pre><code>{
   "addressList": [
     {
@@ -359,8 +389,7 @@
 </code></pre>
 
  <li><strong>Example: </strong>Field Definitions Table contrasting ambiguous and useful definitions</li>
-    </ul>
- <table border="1">
+  <table border="1">
   <thead>
     <tr>
       <th>Object</th>
@@ -463,6 +492,7 @@
     </tr>
   </tbody>
 </table>
+</ul>
 </div>
   
   
