@@ -112,6 +112,25 @@
       width: fit-content;
     padding: 10px;
    } 
+
+/*Tool tip*/   
+.tooltip {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip:hover::after {
+  content: "Password must include at least 8 characters, one uppercase letter, and one number.";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #333;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+   
 </style>
 
 
@@ -531,7 +550,7 @@
 </table>
  </ul>
 </div>
-   <h3 id="api"  class="collapsible" >Develop Useful Error Messagesd</h3>
+   <h3 id="api"  class="collapsible" >Develop Useful Error Messages</h3>
     <div class="collapsible-content" style="margin-left: 20px;">
 
 <p><strong>Role: </strong>Business Analyst, Senior Technical Writer</p>
@@ -562,7 +581,7 @@
     <tbody>
       <tr>
         <td>Invalid format</td>
-        <td>Please enter a password using the <a href="url.html">approved format</a>.</td>
+        <td>Please enter a password using the <span class="tooltip">approved format</span>.</td>
       </tr>
       <tr>
         <td>Incorrect format</td>
