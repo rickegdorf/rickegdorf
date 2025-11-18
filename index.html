@@ -305,7 +305,7 @@
   </li>
   <li><strong>Tools: </strong>GitHub, Maven, AsciiDoctor, Markdown, Unit test descriptor files.</li>
      
-<li><strong>Example: </strong>Sample Unit Test Descriptor File showing the "description" key-value property</stron></li>
+<li><strong>Example: </strong>Sample Unit Test Descriptor File showing the "description" key-value property</li>
 <pre><code>
 [
   {
@@ -319,7 +319,7 @@
     "path": "requestData.submitterID",
     "type": "string",
     "length": "",
-    "description": "A unique identifier for the sender of the request. \n\nValid value: XYZ: XYZ Inc.",
+    "description": "A unique identifier for the sender of the request. \n\nValid value: ABC: Landslide",
     "required": true,
   },
   {
@@ -330,6 +330,48 @@
     "required": true,
   },
 </code></pre>
+
+ <li><strong>Example: </strong>Documentation table generated from the "description" key-value property</strong></li>
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Type</th>
+      <th>Length</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>requestData</td>
+      <td>object</td>
+      <td></td>
+      <td>true</td>
+      <td>An object that contains information about the request.</td>
+    </tr>
+    <tr>
+      <td>requestData.submitterID</td>
+      <td>string</td>
+      <td>25</td>
+      <td>true</td>
+      <td>
+        A unique identifier for the sender of the request. <br>
+        Maximum: 25 characters. <br>
+        Valid value: ABC: Landslide.
+      </td>
+    </tr>
+    <tr>
+      <td>requestData.requests[]</td>
+      <td>array</td>
+      <td></td>
+      <td>true</td>
+      <td>
+        An array that contains additional data about the request. Typically, the request is for a claim, but is not limited to a claim request.
+      </td>
+    </tr>
+  </tbody>
+</table> 
     </ul> 
     </div>
 
