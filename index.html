@@ -257,8 +257,6 @@
     <li>Established a comprehensive Data Dictionary to accelerate SQL query development and Power BI reporting.</li>
     <li>Streamlined backlog management by introducing tagging conventions in Azure DevOps.</li>
    </ul>
-   
-  <li>Documented business requirements, coordinated UAT/E2E testing, validated data migration, and built a SQL‑based data dictionary to accelerate Power BI reporting.</li>
   <li><strong>Outcome: </strong>
    <ul>
     <li>Eliminated reliance on spreadsheets, reducing manual effort by 80%</li>
@@ -273,52 +271,64 @@
 
 
 </div>
-  
-<h4 id="deliverables" class="collapsible" >Deliverables and Artifacts</h4>
-<div class="collapsible-content" style="margin-left: 30px;">
-<p><strong>Power BI Artifact: Work Queue Report</strong></p>
-<ul>
-  <li>Filters by due date, assigned associate, task, seller, broker.</li>
-  <li>Built upon a SQL query that extracts data from the production database.</li>
-  <li>Tools: SQL Server Management Studio, Power BI Desktop, SharePoint</li>
-</ul>
-
-<p><strong>UAT and E2E Testing Contributions</strong></p>
-<ul>
-  <li>Developed a test case template with built-in formulae, table of contents, and filters for quick reference.</li>
-  <li>Authored and proctored dozens of user and end-to-end test cases.</li>
-  <li>Tools: Azure Dev Ops, SQL Server Management Studio, Microsoft Excel</li>
-</ul>
-  
-<p><strong>Power BI Artifact: Production Database Meta Data Dictionary</strong></p>
-<ul>
-  <li>Filters by schema, table, column, FKey.</li>
-  <li>Built upon a SQL query that extracts data from the production database.</li>
-  <li>Tools: SQL Server Management Studio, Power BI Desktop, SharePoint</li>
-</ul>
-
-<p><strong>Data Dictionary</strong></p>
-<ul>
-  <li>Mapped schema, table, and column information between old and new databases.</li>
-  <li>When a direct mapping did not exist, provided explanation, conditions, and SQL query to derive same data.</li>
-  <li>Tools: Microsoft Excel, SQL Server Management Studio, Power BI Desktop, SharePoint</li>
-</ul>
-</div>
-
 
 <h3 id="api"  class="collapsible" >Develop Effective Data Dictionary and API Documentation</h3>
     <div class="collapsible-content" style="margin-left: 20px;">
-  
-  <p>Have you ever experienced bad documentation—such as being oversimplified, written for the wrong audience, or lacking clarity?</p>
 
-  <p>Whether you're assembling your child's toy or setting up a camera for a once-in-a-lifetime solar eclipse, poorly written and ambiguous documentation can be wasteful and frustrating. Clearly written field definition reference documentation is even more critical, since the target audience is technical and efficiency is key.
-    </p>
- 
-<p>Following is a sample JSON and its corresponding field definitions table from an API reference guide. Compare the ambiguous definitions with the useful, descriptive ones written by a technical writer. Which do you prefer?</p>
+<p><strong>Role: </strong>Business Analyst, Project Lead, Senior Technical Writer, Developer</p>
+<ul>
+  <li><strong>Challenges: </strong>
+   <ul>
+    <li>Accurate, timely API documentation developed from source-of-truth data.</li> 
+    <li>Ambiguous, oversimplified, and written for the wrong audience, leading to inefficiencies and errors in API implementation.</li>
+   </ul>
+  <li><strong>Action: </strong></li>
+   <ul>
+    <li>Developed processes and infrastructure capable of systemically generated API documentation .
+    <li>Conducted a full audit of API field definitions and identified inconsistencies.</li>
+    <li>Authored clear, descriptive API documentation with constraints, examples, and ISO standards.</li>
+    <li>Developed a reusable template for field definitions, ensuring consistency across future projects.</li>
+   </ul>
+  <li><strong>Outcome: </strong>
+<ul>
+  <li>Developed and implemented best practices and infrastructure for accurate, real-time API documentation from source-of-truth data, reducing manual effort by 75% and minimizing impact on Dev/QA teams.</li>
+  <li>Eliminated ambiguity in documentation, accelerating developer onboarding and reducing integration errors.</li>
+  <li>Established a best‑practice framework for technical documentation, widely adopted across teams.</li>
+  <li>Fostered alignment, collaboration, and innovation between documentation, Dev, and QA teams.</li>
+  <li>Built an extensible, non‑proprietary framework leveraging existing tools (GitHub, Spring REST, Maven, AsciiDoctor, Markdown), ensuring platform independence and accessibility for external end users, with capability to support a data dictionary.</li>
+</ul>
+  </li>
+  <li><strong>Tools: </strong>GitHub, Maven, AsciiDoctor, Markdown, Unit test descriptor files.</li>
+</ul>
 
-<strong>Sample JSON</strong>
-
-<pre><code>{
+     
+<li><strong>Example: </strong>Sample Unit Test Descriptor File</stron></li>
+<pre><code>
+[
+  {
+    "path": "requestData",
+    "type": "object",
+    "length": "",
+    "description": "An object that contains data about the request.",
+    "required": true,
+  },
+  {
+    "path": "requestData.submitterID",
+    "type": "string",
+    "length": "",
+    "description": "A unique identifier for the sender of the request. \n\nValid value: EVC: Evicore.",
+    "required": true,
+  },
+  {
+    "path": "requestData.requests[]",
+    "type": "array",
+    "length": "",
+    "description": "A list that contains additional data about the request. Typically, the request is for a claim, but is not limited to a claim request.",
+    "required": true,
+  },
+</code></pre>
+     
+ <pre><code>{
   "addressList": [
     {
       "address1": "string",
@@ -348,8 +358,8 @@
 }
 </code></pre>
 
-<strong>Field Definitions Table</strong>
-
+ <li><strong>Example: </strong>Field Definitions Table contrasting ambiguous and useful definitions</li>
+    </ul>
  <table border="1">
   <thead>
     <tr>
