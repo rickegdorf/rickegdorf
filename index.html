@@ -115,21 +115,51 @@
 
 /*Tool tip*/   
 .tooltip {
-  position: relative;
-  cursor: help;
-}
+      position: relative;
+      cursor: help;
+      color: #2563eb; /* blue text */
+      text-decoration: underline;
+    }
 
-.tooltip:hover::after {
-  content: "Password must include at least 8 characters, one uppercase letter, and one number.";
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background: #333;
-  color: #fff;
-  padding: 6px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
+    /* Tooltip box */
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: left;
+      padding: 8px;
+      border-radius: 4px;
+
+      /* Positioning */
+      position: absolute;
+      z-index: 1;
+      bottom: 125%; /* above the text */
+      left: 50%;
+      transform: translateX(-50%);
+
+      /* Transition for fade-in */
+      transition: opacity 0.3s;
+    }
+
+    /* Arrow */
+    .tooltip .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%; /* bottom of tooltip */
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+    }
+
+    /* Show tooltip on hover */
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
    
 </style>
 
@@ -581,7 +611,11 @@
     <tbody>
       <tr>
         <td>Invalid format</td>
-        <td>Please enter a password using the <span class="tooltip">approved format</span>.</td>
+        <td>Please enter a password using the <span class="tooltip">approved format <span class="tooltip-text">
+            Password must include at least 8 characters, one uppercase letter, and one number.
+          </span>
+        </span>.
+      </td>
       </tr>
       <tr>
         <td>Incorrect format</td>
