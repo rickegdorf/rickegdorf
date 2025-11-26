@@ -323,66 +323,6 @@
     </tr>
   </tbody>
 </table>
-
-
-
-
- 
-  <table border="1" cellpadding="8" style="table-layout: auto; width: 100%; display:none;">
-    <thead>
-      <tr>
-        <th>Disciplines</th>
-        <th>Tools</th>
-        <th>Deliverables</th>
-        <th>Applications</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="vertical-align: top; white-space: nowrap;">
-          Audience Analysis<br>
-          Business Process Modeling<br>
-          Process Gap Analysis<br>
-          Requirements Gathering<br>
-          Software Testing and QA<br>
-        </td>
-        <td style="vertical-align: top;">
-          SQL<br>
-          Markdown<br>
-          JSON<br>
-          XML<br>
-          JavaScript<br>
-          HTML<br>
-          CSS<br>
-          Regular Expressions (RegEx)<br>
-          Pandoc
-        </td>
-        <td style="vertical-align: top;">
-          Business and Technical Requirements<br>
-          Process Documentation<br>
-          User Stories & Bug Tickets<br>
-          User Acceptance Test Cases<br>
-          User Documentation<br>
-          Power BI Reports<br>
-          API Documentation<br>
-          Reference Guides<br>
-          Integration Guides
-        </td>
-        <td style="vertical-align: top;">
-          SQL Server Management Studio<br>
-          Power BI Desktop<br>
-          Azure DevOps<br>
-          GitHub<br>
-          GitHub Desktop<br>
-          GitHub Pages<br>
-          Notepad++<br>
-          Microsoft Office<br>
-          Visio<br>
-          RoboHelp
-        </td>
-      </tr>
-    </tbody>
-  </table>
   
 <h2 id="projects" class="collapsible" >My Featured Projects</h2>
 
@@ -424,6 +364,98 @@
 </ul>
 </div>
 
+<h3 id="api" class="collapsible">Develop Systemically Generated API Documentation Framework</h3>
+<div class="collapsible-content" style="margin-left: 20px;">
+  <p><strong>Role: </strong>Business Analyst, Project Lead, Senior Technical Writer, Developer</p>
+  <ul>
+    <li><strong>Challenges: </strong>
+      <ul>
+        <li>Accurate, timely API documentation developed from source-of-truth data.</li>
+        <li>Ambiguous, oversimplified, and written for the wrong audience, leading to inefficiencies and errors in API implementation.</li>
+      </ul>
+    </li>
+    <li><strong>Action: </strong>
+      <ul>
+        <li>Developed processes and infrastructure capable of systemically generated API documentation.</li>
+        <li>Conducted a full audit of API field definitions and identified inconsistencies.</li>
+        <li>Authored clear, descriptive API documentation with constraints, examples, and ISO standards.</li>
+        <li>Developed a reusable template for field definitions, ensuring consistency across future projects.</li>
+      </ul>
+    </li>
+    <li><strong>Outcome: </strong>
+      <ul>
+        <li>Developed and implemented best practices and infrastructure for accurate, real-time API documentation from source-of-truth data, reducing manual effort by 75% and minimizing impact on Dev/QA teams.</li>
+        <li>Eliminated ambiguity in documentation, accelerating developer onboarding and reducing integration errors.</li>
+        <li>Established a best‑practice framework for technical documentation, widely adopted across teams.</li>
+        <li>Fostered alignment, collaboration, and innovation between documentation, Dev, and QA teams.</li>
+        <li>Built an extensible, non‑proprietary framework leveraging existing tools (GitHub, Spring REST, Maven, AsciiDoctor, Markdown), ensuring platform independence and accessibility for external end users, with capability to support a data dictionary.</li>
+      </ul>
+    </li>
+    <li><strong>Tools: </strong>GitHub, Maven, AsciiDoctor, Markdown, Unit test descriptor files.</li>
+
+    <li><strong>Example: </strong>Sample Unit Test Descriptor File showing the "description" key-value property</li>
+    <pre><code id="json-sample">
+[
+  {
+    "path": "requestData",
+    "type": "object",
+    "length": "",
+    "description": "An object that contains data about the request.",
+    "required": true
+  },
+  {
+    "path": "requestData.submitterID",
+    "type": "string",
+    "length": "",
+    "description": "A unique identifier for the sender of the request.\n\nValid value: ABC: Landslide",
+    "required": true
+  },
+  {
+    "path": "requestData.requests[]",
+    "type": "array",
+    "length": "",
+    "description": "A list that contains additional data about the request. Typically, the request is for a claim, but is not limited to a claim request.",
+    "required": true
+  }
+]
+    </code></pre>
+
+    <li><strong>Example: </strong>F table generated from the "description" key-value property</li>
+    <!-- Button to trigger auto-generation -->
+    <button onclick="generateTable()">Generate Table from JSON</button>
+
+    <!-- Placeholder for generated table -->
+    <div id="table-container"></div>
+  </ul>
+</div>
+
+<script>
+function generateTable() {
+  // Grab JSON text from the <pre><code> block
+  const jsonText = document.getElementById('json-sample').innerText;
+  const jsonData = JSON.parse(jsonText);
+
+  // Build table
+  let table = '<table border="1" cellpadding="8"><thead><tr><th>Path</th><th>Type</th><th>Length</th><th>Required</th><th>Description</th></tr></thead><tbody>';
+  jsonData.forEach(item => {
+    table += `<tr>
+      <td>${item.path}</td>
+      <td>${item.type}</td>
+      <td>${item.length}</td>
+      <td>${item.required}</td>
+      <td>${item.description.replace(/\n/g, '<br>')}</td>
+    </tr>`;
+  });
+  table += '</tbody></table>';
+
+  // Replace static table with generated one
+  document.getElementById('table-container').innerHTML = table;
+}
+</script>
+
+
+
+ <div style="display:none;">
 <h3 id="api"  class="collapsible" >Develop Systemically Generated API Documentation Framework</h3>
   <div class="collapsible-content" style="margin-left: 20px;">
 <p><strong>Role: </strong>Business Analyst, Project Lead, Senior Technical Writer, Developer</p>
@@ -679,7 +711,7 @@
 </table>
  </ul>
 </div>
-
+</div>
  
    <h3 id="api"  class="collapsible" >Develop Useful Error Messages</h3>
     <div class="collapsible-content" style="margin-left: 20px;">
