@@ -120,13 +120,15 @@
    } 
 
  /* Special formatting for SQL code blocks */
-code {
-  background: #000;
+pre.sql code {
+ background: #000;       /* black background */
+  color: #fff;            /* white text */
+  margin-left: 20px;      /* matches your h3 margin */
   padding: 10px;
+  border: none;           /* removes white box/border */
   display: block;
   border-radius: 4px;
   font-family: Consolas, Monaco, monospace;
-  color: #fff;
 }
 
 
@@ -396,7 +398,7 @@ code {
 <h2 class="collapsible">SQL Query Examples</h3> 
 <div class="collapsible-content" style="margin-left: 20px;">
    <h3>Example 1: Find Schema–Table–Column value</h3>
-     <code>
+  <pre class="sql"><code>
 SELECT 
     TABLE_SCHEMA + '.' + TABLE_NAME + '.' + COLUMN_NAME AS SchemaTableColumn
 FROM INFORMATION_SCHEMA.COLUMNS
@@ -405,7 +407,7 @@ WHERE TABLE_SCHEMA LIKE '%Schema%'
    OR COLUMN_NAME LIKE '%Column%'
 ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;
      </code>
-    
+  </pre>
 
  
 <h3>Example 2: Verify legacy DOB values converted to new format (yyyy-MM-dd)</h3>
