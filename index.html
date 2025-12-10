@@ -113,6 +113,7 @@
 .inline-toggle::after {
   content: "▶";
 }
+   /* FORMATTING FOR JSON CODE BLOCK*/
    pre {
       background-color: #f4f4f4;
       width: fit-content;
@@ -121,17 +122,14 @@
 
  /* Special formatting for SQL code blocks */
 pre.sql code {
- background: #000;       /* black background */
+  background: #000;       /* replaces the default white background */
   color: #fff;            /* white text */
-  margin-left: 20px;      /* matches your h3 margin */
   padding: 10px;
-  border: none;           /* removes white box/border */
-  display: block;
   border-radius: 4px;
   font-family: Consolas, Monaco, monospace;
+  margin-left: 20px;      /* aligns with your h3 */
+  border: none;           /* removes any default border */
 }
-
-
    
 /*Tool tip*/   
 .tooltip {
