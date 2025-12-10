@@ -396,7 +396,7 @@
 <h2 class="collapsible">SQL Query Examples</h3> 
 <div class="collapsible-content" style="margin-left: 20px;">
    <h4>Example 1: Find Schema–Table–Column value</h4>
-     <pre class="sql"><code id="SQL sample">
+     <pre class="sql"><code>
 SELECT 
     TABLE_SCHEMA + '.' + TABLE_NAME + '.' + COLUMN_NAME AS SchemaTableColumn
 FROM INFORMATION_SCHEMA.COLUMNS
@@ -411,24 +411,25 @@ ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;
 <h4>Example 2: Verify legacy DOB values converted to new format (yyyy-MM-dd)</h4>
 <pre class="sql"><code>
 SELECT 
-    l.Customer_ID,
-    l.DOB AS LegacyDOB,
-    n.BirthDate AS NewBirthDate
+   l.Customer_ID,
+   l.DOB AS LegacyDOB,
+   n.BirthDate AS NewBirthDate
 FROM LegacySystem.Customers l
 JOIN NewPlatform.Customers n
-    ON l.Customer_ID = n.CustomerNumber
+   ON l.Customer_ID = n.CustomerNumber
 WHERE TRY_CONVERT(date, n.BirthDate) IS NULL
    OR FORMAT(l.DOB, 'yyyy-MM-dd') <> n.BirthDate;
 </code>
 </pre>
+ 
  <h4>Example 3: Find legacy brokers missing from new platform</h4>
  <pre class="sql">
   <code>
-   SELECT l.Broker_ID
-   FROM LegacySystem.Brokers l
-   LEFT JOIN NewPlatform.Brokers n
-    ON l.Broker_ID = n.AgentCode
-   WHERE n.AgentCode IS NULL;
+SELECT l.Broker_ID
+FROM LegacySystem.Brokers l
+LEFT JOIN NewPlatform.Brokers n
+   ON l.Broker_ID = n.AgentCode
+WHERE n.AgentCode IS NULL;
   </code>
  </pre>
 </div>
