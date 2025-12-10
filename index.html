@@ -396,15 +396,17 @@
 <div class="collapsible-content" style="margin-left: 20px;">
    <h4>Example 1: Find Schema–Table–Column value</h4>
      <pre class="sql"><code id="SQL sample">
-      SELECT 
-        TABLE_SCHEMA + '.' + TABLE_NAME + '.' + COLUMN_NAME AS SchemaTableColumn
-      FROM INFORMATION_SCHEMA.COLUMNS
-      WHERE TABLE_SCHEMA LIKE '%Schema%'
-        OR TABLE_NAME LIKE '%Table%'
-        OR COLUMN_NAME LIKE '%Column%'
-      ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;
+SELECT 
+    TABLE_SCHEMA + '.' + TABLE_NAME + '.' + COLUMN_NAME AS SchemaTableColumn
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_SCHEMA LIKE '%Schema%'
+   OR TABLE_NAME LIKE '%Table%'
+   OR COLUMN_NAME LIKE '%Column%'
+ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;
      </code>
      </pre>
+
+ 
 <h4>Example 2: Verify legacy DOB values converted to new format (yyyy-MM-dd)</h4>
 <pre class="sql"><code>
 SELECT 
