@@ -121,15 +121,28 @@
    } 
 
  /* Special formatting for SQL code blocks */
-pre.sql code {
-  background: #000;       /* replaces the default white background */
-  color: #fff;            /* white text */
+pre.sql {
+  background-color: #000;     /* black background */
+  color: #fff;                /* white text */
+  margin-left: 20px;          /* aligns with your h3 */
   padding: 10px;
+  border: none;
   border-radius: 4px;
   font-family: Consolas, Monaco, monospace;
-  margin-left: 20px;      /* aligns with your h3 */
-  border: none;           /* removes any default border */
+  overflow-x: auto;           /* handles long lines */
 }
+
+pre.sql code {
+  background: none;           /* removes inner white box */
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: block;
+  white-space: pre-wrap;
+}
+
+
    
 /*Tool tip*/   
 .tooltip {
