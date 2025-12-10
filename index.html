@@ -410,21 +410,20 @@ pre.sql code {
 <h2 class="collapsible">SQL Query Examples</h3> 
 <div class="collapsible-content" style="margin-left: 20px;">
    <h3>Example 1: Find Schema–Table–Column value</h3>
-  <pre class="sql"><code>
-SELECT 
+  <pre class="sql">
+    <code>SELECT 
     TABLE_SCHEMA + '.' + TABLE_NAME + '.' + COLUMN_NAME AS SchemaTableColumn
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_SCHEMA LIKE '%Schema%'
    OR TABLE_NAME LIKE '%Table%'
    OR COLUMN_NAME LIKE '%Column%'
-ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;
-     </code>
+ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;</code>
   </pre>
 
  
 <h3>Example 2: Verify legacy DOB values converted to new format (yyyy-MM-dd)</h3>
-<pre class="sql"><code>
-SELECT 
+<pre class="sql">
+  <code>SELECT 
    l.Customer_ID,
    l.DOB AS LegacyDOB,
    n.BirthDate AS NewBirthDate
@@ -432,19 +431,16 @@ FROM LegacySystem.Customers l
 JOIN NewPlatform.Customers n
    ON l.Customer_ID = n.CustomerNumber
 WHERE TRY_CONVERT(date, n.BirthDate) IS NULL
-   OR FORMAT(l.DOB, 'yyyy-MM-dd') <> n.BirthDate;
-</code>
+   OR FORMAT(l.DOB, 'yyyy-MM-dd') <> n.BirthDate;</code>
 </pre>
  
  <h3>Example 3: Find legacy brokers missing from new platform</h3>
  <pre class="sql">
-  <code>
-SELECT l.Broker_ID
+  <code>SELECT l.Broker_ID
 FROM LegacySystem.Brokers l
 LEFT JOIN NewPlatform.Brokers n
    ON l.Broker_ID = n.AgentCode
-WHERE n.AgentCode IS NULL;
-  </code>
+WHERE n.AgentCode IS NULL;</code>
  </pre>
 </div>
 
