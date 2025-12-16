@@ -411,7 +411,7 @@ pre.sql code {
 <div class="collapsible-content" style="margin-left: 20px;">
    <h3>Example 1: Find Schema–Table–Column value</h3>
   <h4>Use cases:</h4>
-  <ul ul style="margin-left:30px; padding-left:0;">
+  <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
     <li>
     A technical writer must locate all schema, table, and column names that include the term “Customer” so they can update the data dictionary following recent system changes. This ensures that documentation reflects the latest database structure and supports accurate data lineage and impact analysis.
   </li>
@@ -432,7 +432,7 @@ ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;</code>
  
 <h3>Example 2: Verify legacy DOB values converted to new format (yyyy-MM-dd)</h3>
     <h4>Use cases:</h4>
-  <ul ul style="margin-left:30px; padding-left:0;">
+   <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
     <li>
       A Technical Writer uses this query to verify that customer Date of Birth (DOB) values were migrated correctly from the legacy system to the new platform. This ensures that the data dictionary, field‑level documentation, and source‑to‑target mappings accurately reflect the true system behavior.
     </li>
@@ -454,7 +454,7 @@ WHERE TRY_CONVERT(date, n.BirthDate) IS NULL
  
  <h3>Example 3: Find legacy brokers missing from new platform</h3>
  <h4>Use cases:</h4>
-  <ul ul style="margin-left:30px; padding-left:0;">
+   <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
 <li>
   A Technical Writer / Business Analyst uses this query to identify broker records that exist in the legacy system but were not successfully migrated to the new platform. This information is required to update the data dictionary, source‑to‑target mapping documentation, and migration notes.
 </li>
