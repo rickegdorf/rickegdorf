@@ -15,6 +15,7 @@
     }
     h4 {
       margin-left: 30px; /* Adjust the value as needed */
+      margin-bottom: 4px; /* reduce vertical spacing */
     }
     body, li, p, th, td {
     font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -22,6 +23,13 @@
     line-height: 1.6;
     color: #333;
     }
+
+    li.hanging-indent { /* Set hanging indent for li text */
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+    
    td { vertical-align: top;}
    caption {
   font-weight: bold;   /* makes caption text bold */
@@ -412,10 +420,10 @@ pre.sql code {
    <h3>Example 1: Find Schema–Table–Column value</h3>
   <h4>Use cases:</h4>
   <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
-    <li>
+    <li class="hanging-indent">
     A technical writer must locate all schema, table, and column names that include the term “Customer” so they can update the data dictionary following recent system changes. This ensures that documentation reflects the latest database structure and supports accurate data lineage and impact analysis.
   </li>
-  <li>
+  <li class="hanging-indent">
     A UAT Data Analyst must locate all database objects that have changed between the legacy and target systems so they can validate data mappings, assess system impact, and update the data dictionary. This ensures that UAT scenarios reflect the correct data structures and that downstream teams have accurate documentation.
   </li></ul>
 
@@ -433,10 +441,10 @@ ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;</code>
 <h3>Example 2: Verify legacy DOB values converted to new format (yyyy-MM-dd)</h3>
     <h4>Use cases:</h4>
    <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
-    <li>
+    <li class="hanging-indent">
       A Technical Writer uses this query to verify that customer Date of Birth (DOB) values were migrated correctly from the legacy system to the new platform. This ensures that the data dictionary, field‑level documentation, and source‑to‑target mappings accurately reflect the true system behavior.
     </li>
-    <li>
+    <li class="hanging-indent">
       A UAT Data Analyst is validating customer data after a migration from the legacy platform to the new system. They need to confirm that all DOB values were transferred correctly. Running this query provides a list of mismatched or invalid DOBs that must be corrected before UAT sign‑off.
     </li>
   </ul>
@@ -455,10 +463,10 @@ WHERE TRY_CONVERT(date, n.BirthDate) IS NULL
  <h3>Example 3: Find legacy brokers missing from new platform</h3>
  <h4>Use cases:</h4>
    <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
-<li>
+<li class="hanging-indent">
   A Technical Writer / Business Analyst uses this query to identify broker records that exist in the legacy system but were not successfully migrated to the new platform. This information is required to update the data dictionary, source‑to‑target mapping documentation, and migration notes.
 </li>
-    <li>      
+    <li class="hanging-indent">      
 A UAT Data Analyst uses this query to verify that all broker records from the legacy system were successfully migrated to the new platform. This ensures that UAT test scenarios accurately reflect real‑world data and that no broker‑related functionality fails due to missing records.
    </li>
   </ul>
