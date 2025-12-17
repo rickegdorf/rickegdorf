@@ -442,10 +442,10 @@ ORDER BY TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME;</code>
     <p style="margin-left:30px;"><strong>Use cases:</strong></p>
    <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
     <li class="hanging-indent">
-      A Technical Writer uses this query to verify that customer Date of Birth (DOB) values were migrated correctly from the legacy system to the new platform. This ensures that the data dictionary, field‑level documentation, and source‑to‑target mappings accurately reflect the true system behavior.
+      A Technical Writer must verify that customer Date of Birth (DOB) values were migrated correctly from the legacy system to the new platform. This ensures that the data dictionary, field‑level documentation, and source‑to‑target mappings accurately reflect the true system behavior.
     </li>
     <li class="hanging-indent">
-      A UAT Data Analyst is validating customer data after a migration from the legacy platform to the new system. They need to confirm that all DOB values were transferred correctly. Running this query provides a list of mismatched or invalid DOBs that must be corrected before UAT sign‑off.
+      A UAT Data Analyst must validate customer data after a migration from the legacy platform to the new system. They need to confirm that all DOB values were transferred correctly. Running this query provides a list of mismatched or invalid DOBs that must be corrected before UAT sign‑off.
     </li>
   </ul>
 <pre class="sql">
@@ -464,10 +464,10 @@ WHERE TRY_CONVERT(date, n.BirthDate) IS NULL
  <p style="margin-left:30px;"><strong>Use cases:</strong></p>
    <ul style="margin-left:30px; padding-left:0; list-style-position:inside;">
 <li class="hanging-indent">
-  A Technical Writer / Business Analyst uses this query to identify broker records that exist in the legacy system but were not successfully migrated to the new platform. This information is required to update the data dictionary, source‑to‑target mapping documentation, and migration notes.
+  A Technical Writer / Business Analyst must identify broker records that exist in the legacy system but were not successfully migrated to the new platform. This information is required to update the data dictionary, source‑to‑target mapping documentation, and migration notes.
 </li>
     <li class="hanging-indent">      
-A UAT Data Analyst uses this query to verify that all broker records from the legacy system were successfully migrated to the new platform. This ensures that UAT test scenarios accurately reflect real‑world data and that no broker‑related functionality fails due to missing records.
+A UAT Data Analyst must verify that all broker records from the legacy system were successfully migrated to the new platform. This ensures that UAT test scenarios accurately reflect real‑world data and that no broker‑related functionality fails due to missing records.
    </li>
   </ul>
  <pre class="sql">
